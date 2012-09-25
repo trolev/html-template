@@ -1,3 +1,4 @@
+/*global.css*/
 .clear,
 .clear-line {
   display: block;
@@ -48,25 +49,18 @@ img.img-right {
 .align-right {
   text-align: right !important;
 }
-
-.d-hide {
-  display: none !important;
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
 }
-.d-show {
-  display: block !important;
+.margin-bottom-5 {
+  margin-bottom: 5px !important;
 }
-.f-left {
-  float: left !important;
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
 }
-.f-right {
-  float: right !important;
+.margin-bottom-15 {
+  margin-bottom: 15px !important;
 }
-.a-justify {
-  text-align: justify !important;
-}
-.a-left {
-  text-align: left !important;
-}
-.a-right {
-  text-align: right !important;
+.margin-bottom-20 {
+  margin-bottom: 20px !important;
 }

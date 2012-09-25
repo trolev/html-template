@@ -1,0 +1,1 @@
+document.write("<sc"+"ript src='media/js/plugins/fancybox/jquery.fancybox.pack.js'></sc"+"ript>");
