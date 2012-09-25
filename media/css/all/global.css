@@ -1,0 +1,72 @@
+.clear,
+.clear-line {
+  display: block;
+  clear: both;
+}
+.clear-line {
+  font-size: 0;
+  line-height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+img.img-left {
+  float: left;
+  margin: 2px 18px 12px 0;
+}
+img.img-right {
+  float: right;
+  margin: 2px 18px 12px 0;
+}
+
+.display-hide {
+  display: none !important;
+}
+.display-show {
+  display: block !important;
+}
+.float-left {
+  float: left !important;
+}
+.float-right {
+  float: right !important;
+}
+.align-justify {
+  text-align: justify !important;
+}
+.align-left {
+  text-align: left !important;
+}
+.align-right {
+  text-align: right !important;
+}
+
+.d-hide {
+  display: none !important;
+}
+.d-show {
+  display: block !important;
+}
+.f-left {
+  float: left !important;
+}
+.f-right {
+  float: right !important;
+}
+.a-justify {
+  text-align: justify !important;
+}
+.a-left {
+  text-align: left !important;
+}
+.a-right {
+  text-align: right !important;
+}
