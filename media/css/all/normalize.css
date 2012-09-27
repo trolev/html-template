@@ -1,111 +1,107 @@
 /*normalize.css*/
-.l-page {
+.normalize {
   overflow: hidden;
   line-height: 18px;
 }
-
-h1 {
+.normalize h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-h2 {
+.normalize h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
-h3 {
+.normalize h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
-h4 {
+.normalize h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
-h5 {
+.normalize h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
-h6 {
+.normalize h6 {
   font-size: 0.75em;
   margin: 2.33em 0;
 }
-
-ol,
-ul {
-    margin: 1em 0;
-    padding-left: 40px;
+.normalize ol,
+.normalize ul {
+  margin: 1em 0;
+  padding-left: 40px;
 }
-ul {
+.normalize ul {
   list-style: disc;
 }
-ul ul {
+.normalize ul ul {
   list-style: circle;
 }
-ul ul ul {
+.normalize ul ul ul {
   list-style: square;
 }
- ol {
+.normalize ol {
   list-style: decimal;
 }
-ul.unstyled,
-ol.unstyled {
+.normalize ul.unstyled,
+.normalize ol.unstyled {
   padding-left: 0;
   list-style: none;
 }
-
-img {
+.normalize img {
   clear: both;
   margin-bottom: 5px;
 }
-
-table,
-td,
-th {
+.normalize table,
+.normalize td,
+.normalize th {
   border: none;
 }
-table th,
-table td {
+.normalize table th,
+.normalize table td {
   padding: 8px;
   line-height: 18px;
   text-align: left;
   vertical-align: top;
 }
-table {
+.normalize table {
   border-spacing: 0;
   border-collapse: separate;
   *border-collapse: collapsed;
   max-width: 100%;
 }
-table th {
+.normalize table th {
   font-weight: bold;
 }
-table[border] {
+.normalize table[border] {
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
-table[border] thead td,
-table[border] thead th {
+.normalize table[border] thead td,
+.normalize table[border] thead th {
   background: #f3f3f3;
 }
-table[border] th,
-table[border] td {
+.normalize table[border] th,
+.normalize table[border] td {
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
 }
-table[border] th {
+.normalize table[border] th {
   background: #f8f8f8;
 }
-table[border="2"],
-table[border="2"] td,
-table[border="2"] th {
+.normalize table[border="2"],
+.normalize table[border="2"] td,
+.normalize table[border="2"] th {
   border-width: 2px !important;
 }
-table[border="3"],
-table[border="3"] td,
-table[border="3"] th {
+.normalize table[border="3"],
+.normalize table[border="3"] td,
+.normalize table[border="3"] th {
   border-width: 3px !important;
 }
-table[border="0"],
-table[border="0"] td,
-table[border="0"] th {
+.normalize table[border="0"],
+.normalize table[border="0"] td,
+.normalize table[border="0"] th {
   border-width: 3px !important;
 }
