@@ -1,0 +1,18 @@
+@base-color: #333;
+
+.radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.shadow (@a, @a2){
+  -webkit-box-shadow: @a rgba(0, 0, 0, @a2);
+  -moz-box-shadow: @a rgba(0, 0, 0, @a2);
+  -ms-box-shadow: @a rgba(0, 0, 0, @a2);
+  box-shadow: @a rgba(0, 0, 0, @a2);
+}
+
+.sp (@p) {
+  background: url('../images/sprite.png') no-repeat @p;
+}

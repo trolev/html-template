@@ -1,0 +1,65 @@
+ @import 'var.less';
+
+ /*Base styles*/
+html,
+input,
+select,
+textarea {
+  color: @base-color;
+  font-size: 13px;
+  font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+}
+::selection {
+  background: #0784ad;
+  color: #fff;
+}
+::-moz-selection {
+  background: #0784ad;
+  color: #fff;
+}
+a {
+  color: #1b66ff;
+} 
+
+/*Layout*/
+.l-page {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  min-height: 100%;
+  width: 940px;
+}
+.l-conteiner {
+  position: relative;
+  margin: 0 auto 140px;
+  height: 1%;
+}
+.l-conteiner:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.l-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+.l-header {
+  position: relative;
+  margin: 0 auto;
+  height: 100px;
+}
+.l-column-aside {
+  float: left;
+  width: 25%;
+}
+.l-column-content {
+  float: right;
+  width: 70%;
+}
+
+/*Blocks*/
