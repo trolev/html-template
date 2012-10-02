@@ -1,36 +1,52 @@
 /*normalize.css*/
 .normalize {
-  overflow: hidden;
-  line-height: 18px;
+  line-height: normal;
+}
+.normalize p,
+.normalize ul,
+.normalize ol {
+  margin-bottom: 1em;
+}
+.normalize:before {
+  display: block;
+  content: '';
+}
+.normalize:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+.normalize h1,
+.normalize h2,
+.normalize h3,
+.normalize h4,
+.normalize h5,
+.normalize h6 {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: normal;
 }
 .normalize h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 .normalize h2 {
   font-size: 1.5em;
-  margin: 0.83em 0;
 }
 .normalize h3 {
   font-size: 1.17em;
-  margin: 1em 0;
 }
 .normalize h4 {
   font-size: 1em;
-  margin: 1.33em 0;
 }
 .normalize h5 {
   font-size: 0.83em;
-  margin: 1.67em 0;
 }
 .normalize h6 {
   font-size: 0.75em;
-  margin: 2.33em 0;
 }
 .normalize ol,
 .normalize ul {
-  margin: 1em 0;
-  padding-left: 40px;
+  padding-left: 30px;
 }
 .normalize ul {
   list-style: disc;
@@ -52,6 +68,14 @@
 .normalize img {
   clear: both;
   margin-bottom: 5px;
+}
+.normalize img.img-left {
+  float: left;
+  margin: 2px 18px 12px 0;
+}
+.normalize img.img-right {
+  float: right;
+  margin: 2px 18px 12px 0;
 }
 .normalize table,
 .normalize td,

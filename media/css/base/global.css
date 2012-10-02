@@ -19,14 +19,6 @@
 .clearfix:after {
   clear: both;
 }
-img.img-left {
-  float: left;
-  margin: 2px 18px 12px 0;
-}
-img.img-right {
-  float: right;
-  margin: 2px 18px 12px 0;
-}
 .hide {
   display: none !important;
 }
@@ -48,20 +40,29 @@ img.img-right {
 .align-right {
   text-align: right !important;
 }
-.margin-bottom-0 {
+.line-through {
+  text-decoration: line-through !important;
+}
+.mb0 {
   margin-bottom: 0 !important;
 }
-.margin-bottom-5 {
+.mb5 {
   margin-bottom: 5px !important;
 }
-.margin-bottom-10 {
+.mb10 {
   margin-bottom: 10px !important;
 }
-.margin-bottom-15 {
+.mb15 {
   margin-bottom: 15px !important;
 }
-.margin-bottom-20 {
+.mb20 {
   margin-bottom: 20px !important;
+}
+.mb25 {
+  margin-bottom: 25px !important;
+}
+.mb30 {
+  margin-bottom: 30px !important;
 }
 .fs11 {
   font-size: 11px !important;
