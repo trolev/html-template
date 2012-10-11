@@ -1,0 +1,33 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', 'less' ]
+2 info using npm@1.1.33
+3 info using node@v0.8.1
+4 verbose config file /home/user/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose read json /home/user/work/tests/template/package.json
+8 verbose read json /home/user/work/tests/template/package.json
+9 verbose cache add [ 'less', null ]
+10 silly cache add name=undefined spec="less" args=["less",null]
+11 verbose parsed url { pathname: 'less', path: 'less', href: 'less' }
+12 verbose lock less /home/user/.npm/0b439cf4e10f87567e60f4b7818ecd57383dc7f0-less.lock
+13 verbose addNamed [ 'less', '' ]
+14 verbose addNamed [ null, '' ]
+15 verbose lock less@ /home/user/.npm/e13833ab1eea1170e378bcb956fe339de5061076-less-.lock
+16 error Error: EACCES, open '/home/user/.npm/e13833ab1eea1170e378bcb956fe339de5061076-less-.lock'
+16 error  { [Error: EACCES, open '/home/user/.npm/e13833ab1eea1170e378bcb956fe339de5061076-less-.lock']
+16 error   errno: 3,
+16 error   code: 'EACCES',
+16 error   path: '/home/user/.npm/e13833ab1eea1170e378bcb956fe339de5061076-less-.lock' }
+17 error Please try running this command again as root/Administrator.
+18 error System Linux 3.2.0-31-generic-pae
+19 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "less"
+20 error cwd /home/user/work/tests/template
+21 error node -v v0.8.1
+22 error npm -v 1.1.33
+23 error path /home/user/.npm/e13833ab1eea1170e378bcb956fe339de5061076-less-.lock
+24 error code EACCES
+25 error message EACCES, open '/home/user/.npm/e13833ab1eea1170e378bcb956fe339de5061076-less-.lock'
+26 error errno 3
+27 error 3 errno
+28 verbose exit [ 3, true ]

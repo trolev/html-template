@@ -1,18 +1,38 @@
 @base-color: #333;
 
-.radius (@radius: 5px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  border-radius: @radius;
+@arial: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+@verdana: Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif;
+@tahoma: Tahoma, 'Geneva CY', sans-serif;
+@roman: 'Times New Roman', 'Times CY', 'Nimbus Roman No9 L', serif;
+@georgia: Georgia, 'Century Schoolbook L', serif;
+
+.border-radius(@arguments: 5) {
+  -webkit-border-radius: @arguments;
+  -moz-border-radius: @arguments;
+  border-radius: @arguments;
 }
 
-.shadow (@a, @a2){
-  -webkit-box-shadow: @a rgba(0, 0, 0, @a2);
-  -moz-box-shadow: @a rgba(0, 0, 0, @a2);
-  -ms-box-shadow: @a rgba(0, 0, 0, @a2);
-  box-shadow: @a rgba(0, 0, 0, @a2);
+.box-shadow(@arguments: 0 0 2px 0 rgba(0, 0, 0, 0.10)) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
 }
 
-.sp (@p) {
-  background: url('../images/sprite.png') no-repeat @p;
+.gradient(@color: #F5F5F5, @start: #FFF, @stop: #EEE) {
+  background: @color;
+  background: -moz-linear-gradient(top, @start 0%, @stop 100%);
+  background: -webkit-linear-gradient(top,  @start 0%, @stop 100%);
+  background: -o-linear-gradient(top,  @start 0%, @stop 100%);
+  background: -ms-linear-gradient(top,  @start 0%, @stop 100%);
+  background: linear-gradient(to bottom,  @start 0%, @stop 100%);
+}
+
+.sprite(@position) {
+  background: url('../images/sprite.png') no-repeat @position;
+}
+
+.opacity(@argument) {
+  opacity: @argument/100;
+  -moz-opacity: @argument/100;
+  filter: alpha(opacity=@argument);
 }
