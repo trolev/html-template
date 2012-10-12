@@ -4,7 +4,7 @@ input,
 select,
 textarea {
   color: #333333;
-  font: 12px Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif;
+  font: 12px Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
 }
 ::selection {
   background: #0784ad;
@@ -17,7 +17,8 @@ textarea {
 a {
   color: #1b66ff;
 }
-/*Layout*/
+/*Blocks*/
+/*$page*/
 .page {
   position: relative;
   margin: 0 auto;
@@ -32,11 +33,7 @@ a {
 .page:after {
   clear: both;
 }
-.header {
-  position: relative;
-  margin: 0 auto;
-  height: 100px;
-}
+/*$container*/
 .container {
   position: relative;
   margin: 0 auto 140px;
@@ -49,6 +46,7 @@ a {
   height: 0;
   visibility: hidden;
 }
+/*$column*/
 .column__aside {
   float: left;
   width: 25%;
@@ -57,6 +55,7 @@ a {
   float: right;
   width: 70%;
 }
+/*$footer*/
 .footer {
   position: absolute;
   bottom: 0;
@@ -64,4 +63,9 @@ a {
   width: 100%;
   height: 100px;
 }
-/*Blocks*/
+/*$header*/
+.header {
+  position: relative;
+  margin: 0 auto;
+  height: 100px;
+}
