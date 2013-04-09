@@ -1,10 +1,8 @@
 /*Base styles*/
-html,
-input,
-select,
-textarea {
-  color: #333333;
+body {
   font: 12px Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+  background: #fff;
+  color: #333333;
 }
 ::selection {
   background: #0784ad;
@@ -26,7 +24,8 @@ a {
   width: 940px;
   *zoom: 1;
 }
-.page:before, .page:after {
+.page:before,
+.page:after {
   display: table;
   content: "";
 }
@@ -46,12 +45,11 @@ a {
   height: 0;
   visibility: hidden;
 }
-/*$column*/
-.column__aside {
+.aside {
   float: left;
   width: 25%;
 }
-.column__content {
+.content {
   float: right;
   width: 70%;
 }

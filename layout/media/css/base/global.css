@@ -20,10 +20,10 @@
   clear: both;
 }
 .strong {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .italic {
-  font-style: italic;
+  font-style: italic !important;
 }
 .hide {
   display: none !important;

@@ -1,3 +1,9 @@
 $(document).ready(function(){
-  $('.fancybox').fancybox();
+  $('.fancybox').fancybox({
+    helpers   : {
+      title : {
+        type : 'inside'
+      }
+    }
+  });
 });

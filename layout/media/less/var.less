@@ -6,7 +6,7 @@
 @roman: 'Times New Roman', 'Times CY', 'Nimbus Roman No9 L', serif;
 @georgia: Georgia, 'Century Schoolbook L', serif;
 
-.border-radius(@arguments: 5) {
+.border-radius(@arguments: 5px) {
   -webkit-border-radius: @arguments;
   -moz-border-radius: @arguments;
   border-radius: @arguments;
@@ -33,6 +33,5 @@
 
 .opacity(@argument) {
   opacity: @argument/100;
-  -moz-opacity: @argument/100;
   filter: alpha(opacity=@argument);
 }

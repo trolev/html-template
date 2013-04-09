@@ -1,6 +1,9 @@
 /*normalize.css*/
 .normalize {
-  line-height: normal;
+  padding-bottom: 1px;
+  line-height: 17px;
+  font-size: 12px;
+  font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
 }
 .normalize p,
 .normalize ul,
