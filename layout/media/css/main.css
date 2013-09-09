@@ -1,8 +1,30 @@
-/*Base styles*/
+/* === compiled styles === */
+/* === compiled styles === */
+/* === file other.less === */
+/*$popupwin*/
+.popupwin {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  z-index: 2000;
+  padding: 30px;
+  width: 300px;
+  background-color: #fff;
+}
+/*$forms*/
+input,
+select,
+textarea {
+  font: 12px Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+}
+input[type="text"] {
+  border: 1px solid #999;
+}
+/* === file style.less === */
 body {
   font: 12px Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
   background: #fff;
-  color: #333333;
+  color: #666666;
 }
 ::selection {
   background: #0784ad;
@@ -66,4 +88,7 @@ a {
   position: relative;
   margin: 0 auto;
   height: 100px;
+}
+.sprite {
+  color: #666666;
 }
