@@ -1,0 +1,2 @@
+glue layout/media/images/sprite --img=layout/media/images --css=layout/media/less/
+echo 'ok'
