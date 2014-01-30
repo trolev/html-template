@@ -1,0 +1,25 @@
+.hidden-bs,
+.visible-xs,
+.visible-sm {
+  display: none !important;
+}
+@media (max-width: 999px) {
+  .visible-bs,
+  .hidden-sm {
+    display: none !important;
+  }
+  .visible-sm,
+  .hidden-bs {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .visible-sm,
+  .hidden-xs {
+    display: none !important;
+  }
+  .visible-xs,
+  .hidden-sm {
+    display: block !important;
+  }
+}

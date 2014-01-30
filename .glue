@@ -1,2 +1,1 @@
-glue layout/media/images/sprite --img=layout/media/images --css=layout/media/less/
-echo 'ok'
+glue layout/media/images/sprite --img=layout/media/images --css=layout/media/stylus/ --stylus=layout/media/stylus/variables/
