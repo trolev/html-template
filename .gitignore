@@ -1,4 +1,5 @@
 materials/
+node*/
 layout/media/less/*.css
 *.rar
 *.zip

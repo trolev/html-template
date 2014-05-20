@@ -1,0 +1,11 @@
+rotate(degrees)
+  transform: 'rotate(%s)' % degrees
+
+gradient(color, start, stop)
+  background: color;
+  background: linear-gradient(to bottom,  start 0%, stop 100%);
+
+gradient-hor(color, start, stop)
+  background: color;
+  background-image: linear-gradient(to right, start, stop);
+  background-repeat: repeat-x;

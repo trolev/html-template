@@ -1,0 +1,19 @@
+@import '../variables';
+
+@media (max-width: $md-min) {
+
+  @import '*/*-md';
+
+  .visible-md,
+  .visible-only-md,
+  .hidden-only-bs {
+    display: block !important;
+  }
+
+  .hidden-md,
+  .visible-only-bs,
+  .hidden-only-md {
+    display: none !important;
+  }
+
+}
