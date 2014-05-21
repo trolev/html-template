@@ -33,7 +33,7 @@ module.exports = function(grunt) {
               'layout/media/css/media-bs.css': 'layout/assets/css/blocks/bs.styl',
               'layout/media/css/media-md.css': 'layout/assets/css/blocks/md.styl',
               'layout/media/css/media-sm.css': 'layout/assets/css/blocks/sm.styl',
-              'layout/media/css/media-xs.css': 'layout/assets/css/blocks/xs.styl',
+              'layout/media/css/media-xs.css': 'layout/assets/css/blocks/xs.styl'
             }
           }
         },
@@ -49,30 +49,24 @@ module.exports = function(grunt) {
         },
 
         watch: {
+          shell: {
+            files: ['layout/media/images/sprite/*'],
+            tasks: ['shell'],
+          },
           stylus: {
             files: ['layout/assets/css/**/*.styl'],
             tasks: ['stylus'],
-            options: {
-              interrupt: true,
-            },
           },
           scripts: {
-            files: ['layout/assets/js/*.js'],
+            files: ['layout/assets/js/scripts.js'],
             tasks: ['concat'],
             options: {
               interrupt: true,
             },
           },
           plugins: {
-            files: ['layout/assets/js/**/*.js'],
+            files: ['layout/assets/js/plugins/*.js'],
             tasks: ['uglify'],
-            options: {
-              interrupt: true,
-            },
-          },
-          shell: {
-            files: ['layout/media/images/sprite/*'],
-            tasks: ['shell'],
             options: {
               interrupt: true,
             },
@@ -87,6 +81,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask('default', ['stylus', 'concat', 'uglify', 'shell', 'watch']);
+    grunt.registerTask('default', ['shell', 'stylus', 'concat', 'uglify', 'watch']);
 
 };
