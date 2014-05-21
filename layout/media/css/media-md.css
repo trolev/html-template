@@ -1,1 +1,15 @@
-@media (max-width:999px){.header-md{color:#fff}.visible-md,.visible-only-md,.hidden-only-bs{display:block !important}.hidden-md,.visible-only-bs,.hidden-only-md{display:none !important}}
+@media (max-width: 999px) {
+  .header-md {
+    color: #fff;
+  }
+  .visible-md,
+  .visible-only-md,
+  .hidden-only-bs {
+    display: block !important;
+  }
+  .hidden-md,
+  .visible-only-bs,
+  .hidden-only-md {
+    display: none !important;
+  }
+}

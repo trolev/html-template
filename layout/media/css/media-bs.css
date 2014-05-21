@@ -1,1 +1,18 @@
-.header-bs{color:#fff;-webkit-border-radius:10px;border-radius:10px}.other-bs{color:#444}.hidden-bs,.visible-xs,.visible-sm,.visible-md,.hidden-only-bs,.visible-only-md,.visible-only-sm,.visible-only-xs{display:none !important}
+.header-bs {
+  color: #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.other-bs {
+  color: #444;
+}
+.hidden-bs,
+.visible-xs,
+.visible-sm,
+.visible-md,
+.hidden-only-bs,
+.visible-only-md,
+.visible-only-sm,
+.visible-only-xs {
+  display: none !important;
+}
