@@ -38,6 +38,16 @@ module.exports = function(grunt) {
           }
         },
 
+        shell: {
+            multiple: {
+              command: [
+                'glue layout/media/images/sprite --img=layout/media/images --scss=layout/assets/css/variables --css=layout/assets/css',
+                'mv layout/assets/css/variables/sprite.scss layout/assets/css/variables/sprite-mixins.styl',
+                'mv layout/assets/css/sprite.css layout/assets/css/sprite.styl'
+              ].join('&&')
+            }
+        },
+
         watch: {
           stylus: {
             files: ['layout/assets/css/**/*.styl'],
@@ -60,6 +70,13 @@ module.exports = function(grunt) {
               interrupt: true,
             },
           },
+          shell: {
+            files: ['layout/media/images/sprite/*'],
+            tasks: ['shell'],
+            options: {
+              interrupt: true,
+            },
+          },
         },
 
     });
@@ -68,6 +85,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask('default', ['stylus', 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['stylus', 'concat', 'uglify', 'shell', 'watch']);
+
 };

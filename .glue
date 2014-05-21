@@ -1,8 +1,0 @@
-  glue \
-     layout/media/images/sprite \
-     --img=layout/media/images \
-     --scss=layout/assets/css/variables \
-     --css=layout/assets/css \
-
-  mv layout/assets/css/variables/sprite.scss layout/assets/css/variables/sprite-mixins.styl
-  mv layout/assets/css/sprite.css layout/assets/css/sprite.styl
