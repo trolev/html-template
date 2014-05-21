@@ -1,0 +1,12 @@
+@media (max-width: 479px) {
+  .visible-xs,
+  .visible-only-xs,
+  .hidden-only-sm {
+    display: block !important;
+  }
+  .hidden-xs,
+  .visible-only-sm,
+  .hidden-only-xs {
+    display: none !important;
+  }
+}
