@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         stylus: {
           compile: {
             options: {
-                compress: true,
+                compress: false,
             },
             files: {
               'layout/media/css/base.css': 'layout/assets/css/base/index.styl',

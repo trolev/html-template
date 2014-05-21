@@ -1,1 +1,20 @@
-/*glue*/
+﻿/* glue: 0.9.4 hash: 6598968540 */
+
+sprite-apple-touch-icon(arg = null, arg2 = null)
+  importance = unquote("")
+  if arg and arg2
+    if arg2 == !important or arg2 == important
+      importance = !important
+  else if arg == !important or arg == important
+      importance = !important
+  if p in arg or r in arg
+    background-position: -1px -1px importance
+    if r in arg
+      width: 57px importance
+      height: 57px importance
+  else
+    display: inline-block importance
+    background: url(../images/sprite.png) no-repeat -1px -1px importance
+    width: 57px importance
+    height: 57px importance
+    

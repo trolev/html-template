@@ -82,3 +82,13 @@ a {
   margin: 0 auto;
   height: 100px;
 }
+.sprite-apple-touch-icon {
+  background-image: url("../images/sprite.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.sprite-apple-touch-icon {
+  background-position: -1px -1px;
+  width: 57px;
+  height: 57px;
+}
