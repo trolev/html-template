@@ -1,10 +1,1 @@
-.hidden-bs,
-.visible-xs,
-.visible-sm,
-.visible-md,
-.hidden-only-bs,
-.visible-only-md,
-.visible-only-sm,
-.visible-only-xs {
-  display: none !important;
-}
+.hidden-bs,.visible-xs,.visible-sm,.visible-md,.hidden-only-bs,.visible-only-md,.visible-only-sm,.visible-only-xs{display:none !important}

@@ -1,12 +1,1 @@
-@media (max-width: 767px) {
-  .visible-sm,
-  .visible-only-sm,
-  .hidden-only-md {
-    display: block !important;
-  }
-  .hidden-sm,
-  .visible-only-md,
-  .hidden-only-sm {
-    display: none !important;
-  }
-}
+@media (max-width:767px){.visible-sm,.visible-only-sm,.hidden-only-md{display:block !important}.hidden-sm,.visible-only-md,.hidden-only-sm{display:none !important}}

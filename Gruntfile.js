@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         stylus: {
           compile: {
             options: {
-                compress: false,
+                compress: true,
             },
             files: {
               'layout/media/css/base.css': 'layout/assets/css/base/index.styl',
@@ -35,6 +35,34 @@ module.exports = function(grunt) {
               'layout/media/css/media-sm.css': 'layout/assets/css/blocks/sm.styl',
               'layout/media/css/media-xs.css': 'layout/assets/css/blocks/xs.styl'
             }
+          }
+        },
+
+        sprite: {
+          mixins: {
+            src: ['layout/media/images/sprite/*.png'],
+            destImg: 'layout/media/images/spritesheet.png',
+            destCSS: 'layout/media/images/sprite-mixins.styl',
+            algorithm: 'binary-tree',
+            padding: 1,
+            cssFormat: ['stylus', 'css'],
+            cssTemplate: 'sprite_template/mixins.mustache',
+            cssVarMap: function (sprite) {
+              sprite.name = 's-' + sprite.name;
+            },
+          },
+
+          css: {
+            src: ['layout/media/images/sprite/*.png'],
+            destImg: 'layout/media/images/spritesheet.png',
+            destCSS: 'layout/media/images/sprite-mixins.css',
+            algorithm: 'binary-tree',
+            padding: 1,
+            cssFormat: ['stylus', 'css'],
+            cssTemplate: 'sprite_template/mixins.mustache',
+            cssVarMap: function (sprite) {
+              sprite.name = 's-' + sprite.name;
+            },
           }
         },
 
@@ -51,7 +79,7 @@ module.exports = function(grunt) {
         watch: {
           shell: {
             files: ['layout/media/images/sprite/*'],
-            tasks: ['shell'],
+            tasks: ['shell', 'sprite'],
           },
           stylus: {
             files: ['layout/assets/css/**/*.styl'],
@@ -79,8 +107,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-spritesmith');
     grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask('default', ['shell', 'stylus', 'concat', 'uglify', 'watch']);
+
+
+    grunt.registerTask('default', ['shell', 'sprite', 'stylus', 'concat', 'uglify', 'watch'], function(){
+      grunt.log.writeln(this.name + ", " + arg1 + " " + arg2);
+    });
 
 };

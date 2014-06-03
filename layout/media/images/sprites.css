@@ -1,0 +1,73 @@
+
+s-demo(arg = null, arg2 = null)
+  importance = unquote("")
+  if arg and arg2
+    if arg2 == !important or arg2 == important
+      importance = !important
+  else if arg == !important or arg == important
+      importance = !important
+  if p in arg or r in arg
+    background-position: 0px 0px importance
+    if r in arg
+      width: 59pxpx importance
+      height: 59pxpx importance
+  else
+    display: inline-block importance
+    background: url(spritesheet.png) no-repeat 0px 0px importance
+    width: 59pxpx importance
+    height: 59pxpx importance
+
+s-nav-books-hover(arg = null, arg2 = null)
+  importance = unquote("")
+  if arg and arg2
+    if arg2 == !important or arg2 == important
+      importance = !important
+  else if arg == !important or arg == important
+      importance = !important
+  if p in arg or r in arg
+    background-position: -60px 0px importance
+    if r in arg
+      width: 23pxpx importance
+      height: 19pxpx importance
+  else
+    display: inline-block importance
+    background: url(spritesheet.png) no-repeat -60px 0px importance
+    width: 23pxpx importance
+    height: 19pxpx importance
+
+s-nav-books-mobile(arg = null, arg2 = null)
+  importance = unquote("")
+  if arg and arg2
+    if arg2 == !important or arg2 == important
+      importance = !important
+  else if arg == !important or arg == important
+      importance = !important
+  if p in arg or r in arg
+    background-position: -60px -20px importance
+    if r in arg
+      width: 23pxpx importance
+      height: 19pxpx importance
+  else
+    display: inline-block importance
+    background: url(spritesheet.png) no-repeat -60px -20px importance
+    width: 23pxpx importance
+    height: 19pxpx importance
+
+s-nav-books(arg = null, arg2 = null)
+  importance = unquote("")
+  if arg and arg2
+    if arg2 == !important or arg2 == important
+      importance = !important
+  else if arg == !important or arg == important
+      importance = !important
+  if p in arg or r in arg
+    background-position: -60px -40px importance
+    if r in arg
+      width: 23pxpx importance
+      height: 19pxpx importance
+  else
+    display: inline-block importance
+    background: url(spritesheet.png) no-repeat -60px -40px importance
+    width: 23pxpx importance
+    height: 19pxpx importance
+
