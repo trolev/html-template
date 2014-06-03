@@ -19,9 +19,14 @@
 ### Использование Grunt в проекте
 
 * Переходим в папку с проектом.
-* Выполняем команду `grunt` – запустится событие, которое будет отслеживать изменения в папке `/layout/assets/`
-* JS и CSS скомпилируется в папку `/layout/media/`
+* Выполняем команду `grunt` – запустится событие, которое будет отслеживать изменения в папке `layout/assets/`
+* JS и CSS скомпилируются в папку `layout/media/`
 
+### Генерация спрайтов. Использование.
+
+* PNG складываем в папку `layout/media/images/sprite/`
+* После компиляции появятся/обновятся `layout/media/images/sprite.png` и `layout/assets/css/variables/sprite-mixins.styl`
+* Пример использования: .class-name { s-filename() или s-filename(p) или s-filename(r)}
 
 
 [1]: http://learnboost.github.io/stylus/
