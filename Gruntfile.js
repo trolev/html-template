@@ -41,45 +41,22 @@ module.exports = function(grunt) {
         sprite: {
           mixins: {
             src: ['layout/media/images/sprite/*.png'],
-            destImg: 'layout/media/images/spritesheet.png',
-            destCSS: 'layout/media/images/sprite-mixins.styl',
+            destImg: 'layout/media/images/sprite.png',
+            destCSS: 'layout/assets/css/variables/sprite-mixins.styl',
             algorithm: 'binary-tree',
             padding: 1,
-            cssFormat: ['stylus', 'css'],
+            imgPath: '../images/sprite.png',
             cssTemplate: 'sprite_template/mixins.mustache',
             cssVarMap: function (sprite) {
               sprite.name = 's-' + sprite.name;
             },
           },
-
-          css: {
-            src: ['layout/media/images/sprite/*.png'],
-            destImg: 'layout/media/images/spritesheet.png',
-            destCSS: 'layout/media/images/sprite-mixins.css',
-            algorithm: 'binary-tree',
-            padding: 1,
-            cssFormat: ['stylus', 'css'],
-            cssTemplate: 'sprite_template/mixins.mustache',
-            cssVarMap: function (sprite) {
-              sprite.name = 's-' + sprite.name;
-            },
-          }
-        },
-
-        shell: {
-            multiple: {
-              command: [
-                'glue layout/media/images/sprite --img=layout/media/images --scss=layout/assets/css/variables --css=layout/assets/css',
-                'mv layout/assets/css/variables/sprite.scss layout/assets/css/variables/sprite-mixins.styl',
-                'mv layout/assets/css/sprite.css layout/assets/css/sprite.styl'
-              ].join('&&')
-            }
         },
 
         watch: {
-          shell: {
+          sprite: {
             files: ['layout/media/images/sprite/*'],
-            tasks: ['shell', 'sprite'],
+            tasks: ['sprite'],
           },
           stylus: {
             files: ['layout/assets/css/**/*.styl'],
@@ -100,7 +77,6 @@ module.exports = function(grunt) {
             },
           },
         },
-
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -108,12 +84,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-spritesmith');
-    grunt.loadNpmTasks('grunt-shell');
 
-
-
-    grunt.registerTask('default', ['shell', 'sprite', 'stylus', 'concat', 'uglify', 'watch'], function(){
-      grunt.log.writeln(this.name + ", " + arg1 + " " + arg2);
-    });
+    grunt.registerTask('default', ['sprite', 'stylus', 'concat', 'uglify', 'watch']);
 
 };

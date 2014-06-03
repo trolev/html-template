@@ -1,5 +1,6 @@
+[Html-template.][4]
+
 Для сборки [Stylus][1] и JavaScript используется [gruntjs.com][2]
-Для сборки спрайтов используется [Glue][3] >= 0.9.4
 
 Для работы требуется: Node.js. 
 
@@ -26,3 +27,4 @@
 [1]: http://learnboost.github.io/stylus/
 [2]: http://gruntjs.com
 [3]: https://glue.readthedocs.org/en/latest/installation.html
+[4]: https://github.com/trolev/html-template/tree/master

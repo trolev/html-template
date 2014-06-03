@@ -1,6 +1,4 @@
-﻿/* glue: 0.9.2 hash: 40012123a7 */
-
-sprite-demo(arg = null, arg2 = null)
+s-demo(arg = null, arg2 = null)
   importance = unquote("")
   if arg and arg2
     if arg2 == !important or arg2 == important
@@ -8,67 +6,13 @@ sprite-demo(arg = null, arg2 = null)
   else if arg == !important or arg == important
       importance = !important
   if p in arg or r in arg
-    background-position: -1px -1px importance
+    background-position: 0px 0px importance
     if r in arg
       width: 57px importance
       height: 57px importance
   else
     display: inline-block importance
-    background: url(../images/sprite.png) no-repeat -1px -1px importance
+    background: url(../images/sprite.png) no-repeat 0px 0px importance
     width: 57px importance
     height: 57px importance
-    
-sprite-nav-books(arg = null, arg2 = null)
-  importance = unquote("")
-  if arg and arg2
-    if arg2 == !important or arg2 == important
-      importance = !important
-  else if arg == !important or arg == important
-      importance = !important
-  if p in arg or r in arg
-    background-position: -60px -1px importance
-    if r in arg
-      width: 23px importance
-      height: 19px importance
-  else
-    display: inline-block importance
-    background: url(../images/sprite.png) no-repeat -60px -1px importance
-    width: 23px importance
-    height: 19px importance
-    
-sprite-nav-books-mobile(arg = null, arg2 = null)
-  importance = unquote("")
-  if arg and arg2
-    if arg2 == !important or arg2 == important
-      importance = !important
-  else if arg == !important or arg == important
-      importance = !important
-  if p in arg or r in arg
-    background-position: -60px -22px importance
-    if r in arg
-      width: 23px importance
-      height: 19px importance
-  else
-    display: inline-block importance
-    background: url(../images/sprite.png) no-repeat -60px -22px importance
-    width: 23px importance
-    height: 19px importance
-    
-sprite-nav-books-hover(arg = null, arg2 = null)
-  importance = unquote("")
-  if arg and arg2
-    if arg2 == !important or arg2 == important
-      importance = !important
-  else if arg == !important or arg == important
-      importance = !important
-  if p in arg or r in arg
-    background-position: -1px -60px importance
-    if r in arg
-      width: 23px importance
-      height: 19px importance
-  else
-    display: inline-block importance
-    background: url(../images/sprite.png) no-repeat -1px -60px importance
-    width: 23px importance
-    height: 19px importance
-    
+
