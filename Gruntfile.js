@@ -3,6 +3,21 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        coffee: {
+          compile: {
+            files: {
+              'layout/assets/js/coffee.js': 'layout/assets/js/*.coffee'
+            }
+          }
+        },
+
+        concat: {
+            dist: {
+                src: ['layout/assets/js/*.js',],
+                dest: 'layout/media/js/scripts.js',
+            }
+        },
+
         uglify: {
             options: {
               compress: false,
@@ -46,14 +61,6 @@ module.exports = function(grunt) {
           },
         },
 
-        coffee: {
-          compile: {
-            files: {
-              'layout/media/js/script.js': 'layout/assets/js/*.coffee'
-            }
-          }
-        },
-
         watch: {
           sprite: {
             files: ['layout/media/images/sprite/*'],
@@ -84,12 +91,13 @@ module.exports = function(grunt) {
         },
     });
 
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-spritesmith');
-    grunt.loadNpmTasks('grunt-contrib-coffee');
 
-    grunt.registerTask('default', ['coffee', 'sprite', 'stylus', 'uglify', 'watch']);
+    grunt.registerTask('default', ['coffee', 'concat', 'sprite', 'stylus', 'uglify', 'watch']);
 
 };

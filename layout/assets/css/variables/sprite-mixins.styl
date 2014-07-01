@@ -1,6 +1,4 @@
-﻿/* glue: 0.9.4 hash: 3ae1e102dd */
-
-sprite-demo(arg = null, arg2 = null)
+s-demo(arg = null, arg2 = null)
   importance = unquote("")
   if arg and arg2
     if arg2 == !important or arg2 == important
@@ -8,13 +6,13 @@ sprite-demo(arg = null, arg2 = null)
   else if arg == !important or arg == important
       importance = !important
   if p in arg or r in arg
-    background-position: -1px -1px importance
+    background-position: 0px 0px importance
     if r in arg
       width: 59px importance
       height: 59px importance
   else
     display: inline-block importance
-    background: url(../images/sprite.png) no-repeat -1px -1px importance
+    background: url(../images/sprite.png) no-repeat 0px 0px importance
     width: 59px importance
     height: 59px importance
-    
+
