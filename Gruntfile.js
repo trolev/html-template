@@ -3,16 +3,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        concat: {
-            dist: {
-                src: ['layout/assets/js/*.js',],
-                dest: 'layout/media/js/scripts.js',
-            }
-        },
-
         uglify: {
             options: {
-              compress: true,
+              compress: false,
               beautify: false,
               preserveComments: false,
             },
@@ -38,20 +31,33 @@ module.exports = function(grunt) {
           }
         },
 
-        shell: {
-            multiple: {
-              command: [
-                'glue layout/media/images/sprite --img=layout/media/images --scss=layout/assets/css/variables --css=layout/assets/css',
-                'mv layout/assets/css/variables/sprite.scss layout/assets/css/variables/sprite-mixins.styl',
-                'mv layout/assets/css/sprite.css layout/assets/css/sprite.styl'
-              ].join('&&')
+        sprite: {
+          mixins: {
+            src: ['layout/media/images/sprite/*.png'],
+            destImg: 'layout/media/images/sprite.png',
+            destCSS: 'layout/assets/css/variables/sprite-mixins.styl',
+            algorithm: 'binary-tree',
+            padding: 1,
+            imgPath: '../images/sprite.png',
+            cssTemplate: 'sprite_template/mixins.mustache',
+            cssVarMap: function (sprite) {
+              sprite.name = 's-' + sprite.name;
+            },
+          },
+        },
+
+        coffee: {
+          compile: {
+            files: {
+              'layout/media/js/script.js': 'layout/assets/js/*.coffee'
             }
+          }
         },
 
         watch: {
-          shell: {
+          sprite: {
             files: ['layout/media/images/sprite/*'],
-            tasks: ['shell'],
+            tasks: ['sprite'],
           },
           stylus: {
             files: ['layout/assets/css/**/*.styl'],
@@ -71,16 +77,19 @@ module.exports = function(grunt) {
               interrupt: true,
             },
           },
+          coffee: {
+            files: ['layout/assets/js/*.coffee'],
+            tasks: ['coffee'],
+          }
         },
-
     });
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-spritesmith');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
 
-    grunt.registerTask('default', ['shell', 'stylus', 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['coffee', 'sprite', 'stylus', 'uglify', 'watch']);
 
 };
