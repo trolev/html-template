@@ -3,6 +3,14 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        coffee: {
+          compile: {
+            files: {
+              'layout/assets/js/coffee.js': 'layout/assets/coffee/*.coffee'
+            }
+          }
+        },
+
         concat: {
             dist: {
                 src: ['layout/assets/js/*.js',],
@@ -21,6 +29,24 @@ module.exports = function(grunt) {
                 dest: 'layout/media/js/plugins.js'
             }
         },
+
+        jade: {
+          compile: {
+            files: [{
+              cwd: 'layout/jade', // откуда
+              src: ['**/*.jade'], // что
+              dest: 'layout', // куда
+              expand: true,
+              ext: '.html', // во что
+            }]
+          },
+          options: {
+            client: false,
+            pretty: true
+          },
+        },
+
+        
 
         stylus: {
           compile: {
@@ -69,6 +95,11 @@ module.exports = function(grunt) {
               interrupt: true,
             },
           },
+          jade : {
+            files: ['layout/jade/*.jade'],
+            tasks: ['jade'],
+          },
+
           plugins: {
             files: ['layout/assets/js/plugins/*.js'],
             tasks: ['uglify'],
@@ -76,15 +107,21 @@ module.exports = function(grunt) {
               interrupt: true,
             },
           },
+          coffee: {
+            files: ['layout/assets/coffee/*.coffee'],
+            tasks: ['coffee'],
+          }
         },
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-stylus');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-spritesmith');
 
-    grunt.registerTask('default', ['sprite', 'stylus', 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['sprite', 'stylus', 'concat', 'uglify', 'coffee', 'jade', 'watch']);
 
 };

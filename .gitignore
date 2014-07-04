@@ -6,3 +6,4 @@ layout/media/less/*.css
 *.db
 *.tmp
 *.psd
+.DS_Store
